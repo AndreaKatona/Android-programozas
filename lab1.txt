@@ -1,0 +1,224 @@
+Labor feladatok 1. labor
+
+1.
+fun main() {
+    val a : Int = 2
+    val b : Int =3
+    print("$a + $b = ${a+b}")
+}
+
+2.
+
+fun main() {
+    val daysOfWeek = listOf("Monday",
+                            "Tuesday",
+                            "Wednesday",
+                            "Thursday",
+                            "Friday",
+                            "Saturday",
+                            "Sunday")
+    for(d in daysOfWeek)
+    {
+        println("$d");
+        
+    }
+    
+    println("**********")
+    
+   	val list2 = daysOfWeek.filter { it.startsWith("T") }
+    println(list2)
+    
+    println("**********")
+    
+	val list3 = daysOfWeek.filter { it.contains("e") }
+    println(list3)
+    
+    println("**********")
+     
+    val list4 = daysOfWeek.filter{it.length == 6}
+    println(list4)
+    
+}
+
+3.
+
+fun isPrime(a:Int) : Boolean{
+    
+    var flag = false
+    for (i in 2..a / 2) {
+        // condition for nonprime number
+        if (a % i == 0) {
+            flag = true
+            break
+        }
+    }
+
+    if (!flag)
+        return true
+    else
+        return false
+}
+
+fun main() {
+      for (i in 1..100) {
+      	if(isPrime(i)==true)
+          {
+              print("$i, ")
+          }
+        }
+}
+
+
+4.a
+
+import java.util.Base64
+fun enCode(text:String):String
+{
+    return Base64.getEncoder().encodeToString(text.toByteArray())
+}
+
+fun deCode(text:String):String
+{
+    return String(Base64.getDecoder().decode(text))
+}
+fun main() {
+
+    val a="alma" ;
+    val ena = enCode(a)
+    println(ena)
+    
+    val dea = deCode(ena)
+    println(dea)
+}
+
+4.b
+import java.util.Base64
+
+fun enCode(text:String):String
+{
+    return Base64.getEncoder().encodeToString(text.toByteArray())
+}
+
+fun deCode(text:String):String
+{
+    return String(Base64.getDecoder().decode(text))
+}
+fun messageCoding(msg: String, func: (String) -> String): String
+{
+    return func(msg)
+}
+fun main() {
+    val a="alma" 
+     println(a)
+     
+    val ena = messageCoding(a,::enCode)
+    println(ena)
+    
+    val dea = messageCoding(ena,::deCode)
+    println(dea)
+    
+    val ena_ = messageCoding(dea,::enCode)
+    println(ena_)
+    
+    val dea_ = messageCoding(ena_,::deCode)
+    println(dea_)
+}
+
+5.
+fun evenNum(f: List<Int>):List<Int> = f.filter{x -> x%2 == 0}
+    
+fun main() {
+    val num = listOf(1,2,3,4,5,6,7,8,9)
+    print(evenNum(num))
+    
+}
+
+6.
+fun mapOp() {
+    //1
+    var x = listOf(1, 2, 3, 4, 5, 6)
+    println(x.map { it * 2 })
+    //2
+    val daysOfWeek = listOf("Monday", "Tuesday", "Wendnesday", "Thursday", "Friday", "Saturday", "Sunday")
+    println(daysOfWeek.map { it.uppercase() })
+   	//3
+    println(daysOfWeek.map { it.first().lowercase() })
+    //4
+    println(daysOfWeek.map { it.length })
+    //5
+    val avg = daysOfWeek.map { it.count() }
+    println(avg.average())
+}
+
+fun main() {
+    
+    print(mapOp())
+    
+}
+7.fun mutableList() {
+    val daysOfWeek = mutableListOf("Monday", "Tuesday", "Wendnesday", "Thursday", "Friday", "Saturday", "Sunday")
+    //1
+    val filteredList = daysOfWeek.filter { !it.contains("n") }
+    println(filteredList)
+    //2
+    for ((index, value) in daysOfWeek.withIndex()) {
+        println("Item at $index is $value")
+    }
+    //3
+    val sorted_list = filteredList.sortedWith(naturalOrder())
+    println(sorted_list)
+}
+fun main() {
+    
+    print(mutableList())
+    
+8.
+fun Arrays() {
+    val list: MutableList<Int> = mutableListOf()
+	//1
+    for (i in 0..10) {
+        list += (0..100).random()
+    }
+    
+    list.forEach {
+    	println(" $it ")
+	}
+    //2
+	println()
+    list.sort()
+    println("$list, ")
+
+   	//3
+    for (i in list) {
+        if (i % 2 == 0) {
+            println("Contains even number")
+            break
+        }
+    }
+    //4
+    var even=true
+     list.forEach {
+        if(it%2!=0)
+         {
+            even = false
+         }
+    }
+    if(even) println("All even")
+    else  println("Not all even")
+    
+   
+    
+    
+    //5
+    var sum=0
+    list.forEach {
+        sum += it
+    }
+    println(sum/10)
+
+}
+fun main() {
+    
+    print(Arrays())
+    
+}
