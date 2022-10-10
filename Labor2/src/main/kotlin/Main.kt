@@ -88,9 +88,24 @@ class DictionaryProvider
     }
 }
 
+/**********feladat 2 ********/
 
+fun String.name(): String
+{
+    return this.split(" ").map { it[0] }.joinToString("") { it.toString() }
+}
+
+fun List<String>.joinList(): String
+{
+    return this.map { it }.joinToString(prefix = "", separator = "#", postfix = "") { it.toString() }
+}
+
+fun List<String>.longestString(): String
+{
+    return this.map { it }.maxByOrNull { it }.toString()
+}
 fun main(args: Array<String>) {
-    val dict : iDictionary = DictionaryProvider.createDictionary(DictionaryType.ARRAY_LIST)
+  /*  val dict : iDictionary = DictionaryProvider.createDictionary(DictionaryType.ARRAY_LIST)
     println("Number of words: ${dict.size()}")
     var word: String?
     while(true){
@@ -101,5 +116,13 @@ fun main(args: Array<String>) {
         }
         println("Result: ${word?.let { dict.find(it) }}")
     }
+   */
+/*  feladat 2 */
+    val name = "Jhon Smith"
+    println(name.name())
 
+    val fruits = listOf("apple", "pear", "melon", "strawberry")
+    println(fruits.joinList())
+
+    println(fruits.longestString())
 }
