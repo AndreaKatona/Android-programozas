@@ -50,16 +50,16 @@ class ItemRepository{
     }
     fun save(item:Item)
     {
-
+        items.add(item)
     }
     fun randomItem()
     {
         items.shuffle();
     }
 
-    fun size()
+    fun size():Int
     {
-
+         return items.size
     }
 
 }
