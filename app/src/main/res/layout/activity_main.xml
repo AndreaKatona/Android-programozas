@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.283" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="GET STARTED"
@@ -29,17 +29,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:backgroundTint="@color/teal_700"/>
+        android:backgroundTint="@color/orange"/>
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Your Name"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/button_id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
