@@ -10,41 +10,42 @@ import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
-    private val TAG :String=javaClass.simpleName
-    private val REQUEST_CONTACT = 1
+//    private val TAG :String=javaClass.simpleName
+//    private val REQUEST_CONTACT = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.d(TAG,"onCreate() called!")
-
-        val startButton:Button = findViewById(R.id.button_id)
-        val editText = findViewById<EditText>(R.id.editText)
-
-        startButton.setOnClickListener {
-            Log.d(TAG, "button clicked!")
-            Toast.makeText(applicationContext,"clicked",Toast.LENGTH_LONG).show()
-            val intent = Intent(this@MainActivity, NextActivity::class.java)
-            var name: String =editText.text.toString()
-
-            intent.putExtra("Name",name)
-            startActivity(intent)
-        }
+//        Log.d(TAG,"onCreate() called!")
+//
+//        val startButton:Button = findViewById(R.id.button_id)
+//        val editText = findViewById<EditText>(R.id.editText)
+//
+//        startButton.setOnClickListener {
+//            Log.d(TAG, "button clicked!")
+//            Toast.makeText(applicationContext,"clicked",Toast.LENGTH_LONG).show()
+//            val intent = Intent(this@MainActivity, NextActivity::class.java)
+//            var name: String =editText.text.toString()
+//
+//            intent.putExtra("Name",name)
+//            startActivity(intent)
+//        }
+//    }
+//        override fun onPause() {
+//            super.onPause()
+//            Log.d(TAG, "Pause!")
+//        }
+//
+//        override fun onStop() {
+//            super.onStop()
+//            Log.d(TAG, "Stoped!")
+//        }
+//
+//        override fun onStart() {
+//            super.onStart()
+//            Log.d(TAG, "Started!")
+//        }
     }
-        override fun onPause() {
-            super.onPause()
-            Log.d(TAG, "Pause!")
-        }
-
-        override fun onStop() {
-            super.onStop()
-            Log.d(TAG, "Stoped!")
-        }
-
-        override fun onStart() {
-            super.onStart()
-            Log.d(TAG, "Started!")
-        }
-    }
+}
 
 
