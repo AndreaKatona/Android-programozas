@@ -1,6 +1,8 @@
 package com.example.quizapp.fragment
 
+import android.content.Intent
 import android.os.Bundle
+import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,7 +32,14 @@ class QuizStartFragment:Fragment(R.layout.fragment_start) {
             this.findNavController().navigate(R.id.questionFragment)
         }
 
-        //val chooseContactButton =  view.findViewById<Button>(R.id.choose_contact_btn)
+        //val chooseContactButton =  view.findViewById<Button>(R.id.button_contact)
+        //chooseContactButton.setOnClickListener{
+
+          //  getContent.launch(Intent(Intent.ACTION_PICK,ContactsContract.Contacts.CONTENT_URI).also{
+          //  it.type = ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE
+          //  })
+        //  }
+
 
 
     }
