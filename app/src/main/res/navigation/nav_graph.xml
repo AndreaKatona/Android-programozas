@@ -6,14 +6,26 @@
     app:startDestination="@id/quizStartFragment">
     <fragment
         android:id="@+id/quizStartFragment"
-        android:name="com.example.quizapp.QuizStartFragment"
-        android:label="QuizStartFragment" />
+        android:name="com.example.quizapp.fragment.QuizStartFragment"
+        android:label="QuizStartFragment" >
+        <action
+            android:id="@+id/action_quizStartFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
     <fragment
         android:id="@+id/questionFragment"
-        android:name="com.example.quizapp.QuestionFragment"
-        android:label="QuestionFragment" />
+        android:name="com.example.quizapp.fragment.QuestionFragment"
+        android:label="QuestionFragment" >
+        <action
+            android:id="@+id/action_questionFragment_to_quizEndFragment"
+            app:destination="@id/quizEndFragment" />
+    </fragment>
     <fragment
         android:id="@+id/quizEndFragment"
-        android:name="com.example.quizapp.QuizEndFragment"
-        android:label="QuizEndFragment" />
+        android:name="com.example.quizapp.fragment.QuizEndFragment"
+        android:label="QuizEndFragment" >
+        <action
+            android:id="@+id/action_quizEndFragment_to_quizStartFragment"
+            app:destination="@id/quizStartFragment" />
+    </fragment>
 </navigation>
