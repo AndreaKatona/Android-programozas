@@ -40,12 +40,12 @@ class QuestionFragment:Fragment(R.layout.question_fragment) {
         val nextbtn :Button = binding.nextBtn
 
         val nrOfQuestions = 3
-        val itemController = ItemController(
-            ItemService(ItemRepository),
-            requireActivity(),
-            questionTextTv,
-            arrayListOf(answer1Rb,answer2Rb,answer3Rb,answer4Rb), nextbtn,radioGroup
-        )
-        itemController.quiz(nrOfQuestions)
+       // val itemController = ItemController(
+        //    ItemService(ItemRepository),
+        //    requireActivity(),
+        //    questionTextTv,
+        //    arrayListOf(answer1Rb,answer2Rb,answer3Rb,answer4Rb), nextbtn,radioGroup
+        //)
+        //itemController.quiz(nrOfQuestions)
     }
 }
