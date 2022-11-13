@@ -38,14 +38,15 @@ class QuestionFragment:Fragment(R.layout.question_fragment) {
         val answer3Rb : RadioButton = binding.radioButton3
         val answer4Rb : RadioButton = binding.radioButton4
         val nextbtn :Button = binding.nextBtn
+        val allquestionText :TextView = binding.textView5
 
         val nrOfQuestions = 3
-       // val itemController = ItemController(
-        //    ItemService(ItemRepository),
-        //    requireActivity(),
-        //    questionTextTv,
-        //    arrayListOf(answer1Rb,answer2Rb,answer3Rb,answer4Rb), nextbtn,radioGroup
-        //)
-        //itemController.quiz(nrOfQuestions)
+        val itemController = ItemController(
+            ItemService(ItemRepository),
+            requireActivity(),
+            questionTextTv,
+            arrayListOf(answer1Rb,answer2Rb,answer3Rb,answer4Rb), nextbtn,radioGroup,allquestionText
+        )
+        itemController.quiz(nrOfQuestions)
     }
 }

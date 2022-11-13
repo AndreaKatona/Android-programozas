@@ -5,7 +5,8 @@ class ItemService(private val itemRepository: ItemRepository){
     {
         if (numberOfItems>itemRepository.size())
         {
-            print("The given number is higher than the number of answers")
+            //print("The given number is higher than the number of answers")
+            println("The given number is too high ! Max Value is ${ItemRepository.size()}")
             return emptyList()
         }
         val items = mutableListOf<Item>()

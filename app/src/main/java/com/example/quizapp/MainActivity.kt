@@ -30,22 +30,22 @@ class MainActivity : AppCompatActivity() {
 //            intent.putExtra("Name",name)
 //            startActivity(intent)
 //        }
-//    }
-//        override fun onPause() {
-//            super.onPause()
-//            Log.d(TAG, "Pause!")
-//        }
-//
-//        override fun onStop() {
-//            super.onStop()
-//            Log.d(TAG, "Stoped!")
-//        }
-//
-//        override fun onStart() {
-//            super.onStart()
-//            Log.d(TAG, "Started!")
-//        }
     }
-}
+        override fun onPause() {
+            super.onPause()
+            Log.d("ONPAUSE", "Pause!")
+        }
+
+        override fun onStop() {
+            super.onStop()
+            Log.d("ONSTOP", "Stoped!")
+        }
+
+        override fun onStart() {
+            super.onStart()
+            Log.d("ONSTART", "Started!")
+        }
+    }
+
 
 
