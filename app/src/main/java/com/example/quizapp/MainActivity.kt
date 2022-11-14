@@ -7,6 +7,10 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,6 +20,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val bottomNavigationView = findViewById<BottomNavigationView
+                >(R.id.bottom_navigatin_view)
+        val navController = findNavController(R.id.nav_host_fragment)
+        bottomNavigationView.setupWithNavController(navController
+        )
 //        Log.d(TAG,"onCreate() called!")
 //
 //        val startButton:Button = findViewById(R.id.button_id)
